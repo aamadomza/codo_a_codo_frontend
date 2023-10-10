@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Compraste</h1>
+    
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container my-4">
+        <form action="./compra_tickets.html" method="post" class="needs-validation" novalidate="">
+            <div class="row">
+                <div class="col mb-3">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required="">
+                    <div class="invalid-feedback">
+                        Debes ingresar tu Nombre.
+                    </div>
+                
+                </div>
+                <div class="col mb-3">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" required="">
+                    <div class="invalid-feedback">
+                        Debes ingresar tu Apellido.
+                    </div>                    
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="number" name="cant" id="cant" onchange="calcTotal()" onkeyup="calcTotal()" placeholder="Cantidad de Tickets" class="form-control" required="">
+                    <div class="invalid-feedback">
+                        Debes ingresar una cantidad de Tickets VÁLIDOS.
+                    </div>
+                    <div class="small">
+                        Valor Ticket $1000
+                    </div>
+                </div>
+                <div class="col">
+                    <select class="form-select" id="desc" onchange="calcTotal()">
+                        <option value="50">Estudiante 50%</option>
+                        <option value="30">Orador 30%</option>
+                        <option value="10">Pago en Efectivo 10%</option>
+                    </select>                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3 bg-info p-1">
+                    ¡Total a pagar! $ <span id="total">0</span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <input type="submit" value="Comprar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+
+    <div id="resultadoContainer" class="resultado-container"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="./compra.js"></script>    
+    
+</body>
+</html>
+
+
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compra de Tickets</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+      <link rel="stylesheet" href="./estilos.css">
+
+</head>
+
+
+<!-- <body><audio class="audio-for-speech" src=""></audio><div class="translate-tooltip-mtz green sm-root translate hidden_translate">
+                    <div class="header-wrapper">
+                        <div class="header-controls">
+                            <span class="sound-translate"></span>
+                            <span class="copy green"></span>
+                            <span class="settings-translator"></span>
+                        </div>
+                        <div class="header-title">translator</div>
+                        <div class="translate-icons">
+                            <img class="from" src="">
+                            <img class="translate-arrow" src="chrome-extension://ibppednjgooiepmkgdcoppnmbhmieefh/images/right-arrow.png">
+                            <div class="translate_to_dropdown">
+                                <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton1" aria-expanded="false"></button>
+                                <ul class="dropdown-content-wrapper languageSelector green">
+                                    <li><a class="dropdown-item" data-lang="af">Afrikaans</a></li>
+                                    <li><a class="dropdown-item" data-lang="sq">Albanian - shqipe</a></li>
+                                    <li><a class="dropdown-item" data-lang="ar">Arabic - ‎‫العربية‬‎</a></li>
+                                    <li><a class="dropdown-item" data-lang="hy">Armenian - Հայերէն</a></li>
+                                    <li><a class="dropdown-item" data-lang="az">Azerbaijani - azərbaycanca</a></li>
+                                    <li><a class="dropdown-item" data-lang="eu">Basque - euskara</a></li>
+                                    <li><a class="dropdown-item" data-lang="be">Belarusian - беларуская</a></li>
+                                    <li><a class="dropdown-item" data-lang="bn">Bengali - বাংলা</a></li>
+                                    <li><a class="dropdown-item" data-lang="bg">Bulgarian - български</a></li>
+                                    <li><a class="dropdown-item" data-lang="ca">Catalan - català</a></li>
+                                    <li><a class="dropdown-item" data-lang="zh-CN">Chinese - 中文（简体中文）</a></li>
+                                    <li><a class="dropdown-item" data-lang="zh-TW">Chinese - 中文 (繁體中文)</a></li>
+                                    <li><a class="dropdown-item" data-lang="hr">Croatian - hrvatski</a></li>
+                                    <li><a class="dropdown-item" data-lang="cs">Czech - čeština</a></li>
+                                    <li><a class="dropdown-item" data-lang="da">Danish - dansk</a></li>
+                                    <li><a class="dropdown-item" data-lang="nl">Dutch - Nederlands</a></li>
+                                    <li><a class="dropdown-item" data-lang="en">English</a></li>
+                                    <li><a class="dropdown-item" data-lang="eo">Esperanto - esperanto</a></li>
+                                    <li><a class="dropdown-item" data-lang="et">Estonian - eesti</a></li>
+                                    <li><a class="dropdown-item" data-lang="tl">Filipino</a></li>
+                                    <li><a class="dropdown-item" data-lang="fi">Finnish - suomi</a></li>
+                                    <li><a class="dropdown-item" data-lang="fr">French - français</a></li>
+                                    <li><a class="dropdown-item" data-lang="gl">Galician - galego</a></li>
+                                    <li><a class="dropdown-item" data-lang="ka">Georgian - ქართული</a></li>
+                                    <li><a class="dropdown-item" data-lang="de">German - Deutsch</a></li>
+                                    <li><a class="dropdown-item" data-lang="el">Greek - Ελληνικά</a></li>
+                                    <li><a class="dropdown-item" data-lang="gu">Gujarati - ગુજરાતી</a></li>
+                                    <li><a class="dropdown-item" data-lang="ht">Haitian Creole - kreyòl ayisyen</a></li>
+                                    <li><a class="dropdown-item" data-lang="iw">Hebrew - ‎‫עברית‬‎</a></li>
+                                    <li><a class="dropdown-item" data-lang="hi">Hindi - हिन्दी</a></li>
+                                    <li><a class="dropdown-item" data-lang="hu">Hungarian - magyar</a></li>
+                                    <li><a class="dropdown-item" data-lang="is">Icelandic - íslenska</a></li>
+                                    <li><a class="dropdown-item" data-lang="id">Indonesian - Bahasa Indonesia</a></li>
+                                    <li><a class="dropdown-item" data-lang="ga">Irish - Gaeilge</a></li>
+                                    <li><a class="dropdown-item" data-lang="it">Italian - italiano</a></li>
+                                    <li><a class="dropdown-item" data-lang="ja">Japanese - 日本語</a></li>
+                                    <li><a class="dropdown-item" data-lang="kn">Kannada - ಕನ್ನಡ</a></li>
+                                    <li><a class="dropdown-item" data-lang="ko">Korean - 한국어</a></li>
+                                    <li><a class="dropdown-item" data-lang="la">Latin - Lingua Latina</a></li>
+                                    <li><a class="dropdown-item" data-lang="lv">Latvian - latviešu</a></li>
+                                    <li><a class="dropdown-item" data-lang="lt">Lithuanian - lietuvių</a></li>
+                                    <li><a class="dropdown-item" data-lang="mk">Macedonian - македонски</a></li>
+                                    <li><a class="dropdown-item" data-lang="ms">Malay - Bahasa Melayu</a></li>
+                                    <li><a class="dropdown-item" data-lang="mt">Maltese - Malti</a></li>
+                                    <li><a class="dropdown-item" data-lang="no">Norwegian - norsk</a></li>
+                                    <li><a class="dropdown-item" data-lang="fa">Persian - ‎‫فارسی‬‎</a></li>
+                                    <li><a class="dropdown-item" data-lang="pl">Polish - polski</a></li>
+                                    <li><a class="dropdown-item" data-lang="pt">Portuguese - português</a></li>
+                                    <li><a class="dropdown-item" data-lang="ro">Romanian - română</a></li>
+                                    <li><a class="dropdown-item" data-lang="ru">Russian - русский</a></li>
+                                    <li><a class="dropdown-item" data-lang="sr">Serbian - Српски</a></li>
+                                    <li><a class="dropdown-item" data-lang="sk">Slovak - slovenčina</a></li>
+                                    <li><a class="dropdown-item" data-lang="sl">Slovenian - slovenščina</a></li>
+                                    <li><a class="dropdown-item" data-lang="es">Spanish - español</a></li>
+                                    <li><a class="dropdown-item" data-lang="sw">Swahili - Kiswahili</a></li>
+                                    <li><a class="dropdown-item" data-lang="sv">Swedish - svenska</a></li>
+                                    <li><a class="dropdown-item" data-lang="ta">Tamil - தமிழ்</a></li>
+                                    <li><a class="dropdown-item" data-lang="te">Telugu - తెలుగు</a></li>
+                                    <li><a class="dropdown-item" data-lang="th">Thai - ไทย</a></li>
+                                    <li><a class="dropdown-item" data-lang="tr">Turkish - Türkçe</a></li>
+                                    <li><a class="dropdown-item" data-lang="uk">Ukrainian - українська</a></li>
+                                    <li><a class="dropdown-item" data-lang="ur">Urdu - ‎‫اردو‬‎</a></li>
+                                    <li><a class="dropdown-item" data-lang="vi">Vietnamese - Tiếng Việt</a></li>
+                                    <li><a class="dropdown-item" data-lang="cy">Welsh - Cymraeg</a></li>
+                                    <li><a class="dropdown-item" data-lang="yi">Yiddish - יידיש</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="translated-text">
+                        <div id="translator-words" class="words"></div>
+                        <div class="sentences green"></div>
+                    </div>
+                    <div class="trans_controls">
+                        <div class="trans_controls__control-wrapper double_click">
+                            <span class="trans_controls__toggle dbl-click active" data-store="double_click">
+                                <div class="trans_controls__inner-circle"></div>
+                            </span>
+                            <span class="trans_controls__description">
+                            Double-click
+                            </span>
+                        </div>
+                        <div class="trans_controls__control-wrapper selection">
+                            <span class="trans_controls__toggle icon-trans active" data-store="icon_trans">
+                                <div class="trans_controls__inner-circle"></div>
+                            </span>
+                            <span class="trans_controls__description">
+                            Select to translate
+                            </span>
+                        </div>
+                    </div>
+                </div><span class="translate-button-mtz hidden_translate green"></span>
+     <nav class="navbar navbar-expand-lg navbar-dark bgGrisOscuro">
+        <div class="container-fluid ">
+            <div class="col-6 col-lg-3">
+                <img src="./imagenes/codoacodo.png" alt="" class="w-25">               
+                <a class="navbar-brand textoGris bgGrisOscuro" href="/tp_front_codoacodo2023">Conf BsAs</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav me-2">
+                    <div class="nav-item">
+                        <a class="nav-link textoBlancoB1 bgGrisOscuro" href="#">La conferencia</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoGris bgGrisOscuro" href="#">Los oradores</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoGris bgGrisOscuro" href="#">El lugar y la fecha</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoGris bgGrisOscuro" href="/tp_front_codoacodo2023#convierteteEnUn">Conviértete en un orador</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoVerde bgGrisOscuro" href="/compra_tickets">Comprar ticket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+     <div class="container my-4">
+        <form action="./compra_tickets.html" method="post" class="needs-validation" novalidate="">
+            <div class="row">
+                <div class="col mb-3">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required="">
+                    <div class="invalid-feedback">
+                        Debes ingresar tu Nombre.
+                    </div>
+                
+                </div>
+                <div class="col mb-3">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" required="">
+                    <div class="invalid-feedback">
+                        Debes ingresar tu Apellido.
+                    </div>                    
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="number" name="cant" id="cant" onchange="calcTotal()" onkeyup="calcTotal()" placeholder="Cantidad de Tickets" class="form-control" required="">
+                    <div class="invalid-feedback">
+                        Debes ingresar una cantidad de Tickets VÁLIDOS.
+                    </div>
+                    <div class="small">
+                        Valor Ticket $1000
+                    </div>
+                </div>
+                <div class="col">
+                    <select class="form-select" id="desc" onchange="calcTotal()">
+                        <option value="50">Estudiante 50%</option>
+                        <option value="30">Orador 30%</option>
+                        <option value="10">Pago en Efectivo 10%</option>
+                    </select>                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3 bg-info p-1">
+                    ¡Total a pagar! $ <span id="total">0</span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <input type="submit" value="Comprar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+
+    <div id="resultadoContainer" class="resultado-container"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="./compra.js"></script>    
+
+
+</body></html> --> -->
